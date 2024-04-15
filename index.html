@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center mt-5">Tax Calculator</h1>
+    <form id="taxForm">
+        <div class="form-group">
+            <label for="grossIncome">Gross Annual Income (₹)</label>
+            <input type="number" class="form-control" id="grossIncome" required>
+            <button class="info-btn" data-info="Enter your total gross annual income after deductions.">ℹ️</button>
+            <div class="invalid-feedback">Please enter a valid number.</div>
+        </div>
+        <div class="form-group">
+            <label for="extraIncome">Extra Income (₹)</label>
+            <input type="number" class="form-control" id="extraIncome">
+            <button class="info-btn" data-info="Include any additional income besides your annual salary.">ℹ️</button>
+            <div class="invalid-feedback">Please enter a valid number.</div>
+        </div>
+        <div class="form-group">
+            <label for="deductions">Deductions (₹)</label>
+            <input type="number" class="form-control" id="deductions">
+            <button class="info-btn" data-info="Enter the total amount of deductions to be applied.">ℹ️</button>
+            <div class="invalid-feedback">Please enter a valid number.</div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <select class="form-control" id="age" required>
+                <option value="<40">&lt; 40</option>
+                <option value=">=40 <60">&ge; 40 &lt; 60</option>
+                <option value=">=60">&ge; 60</option>
+            </select>
+            <div class="invalid-feedback">Please select an option.</div>
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Submit</button>
+
+          </div>
+    </form>
+</div>
+
+<div class="modal fade" id="resultModal" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultModalLabel">Tax Calculation Result</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="resultBody">
+                <!-- Result content will be inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

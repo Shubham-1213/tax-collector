@@ -1,0 +1,66 @@
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative; /* Position relative for info button positioning */
+   
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    width: calc(100% - 30px); /* Adjust width to accommodate info button */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button.info-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+.invalid-feedback.active {
+    display: block;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+}
